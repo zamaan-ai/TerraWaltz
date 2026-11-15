@@ -4,13 +4,13 @@
 
 [![NASA Space Apps 2026](https://img.shields.io/badge/NASA%20Space%20Apps-2026%20Global%20Challenge-blue.svg?style=for-the-badge&logo=nasa)](https://www.spaceappschallenge.org/)
 [![Challenge](https://img.shields.io/badge/Challenge-Dancing%20with%20the%20SARs-ff6b00.svg?style=for-the-badge)](https://www.spaceappschallenge.org/)
-[![Test Vectors](https://img.shields.io/badge/Numerical%20Tests-14%2F14%20Passing-10b981.svg?style=for-the-badge)](http://localhost:3001/api/v1/math/verify)
-[![Build](https://img.shields.io/badge/Vite%20Build-Passing%20(588ms)-00f0ff.svg?style=for-the-badge)](http://localhost:3001)
+[![Test Vectors](https://img.shields.io/badge/Numerical%20Tests-14%2F14%20Passing-10b981.svg?style=for-the-badge)](./src/science/radarMath.ts)
+[![Build](https://img.shields.io/badge/Vite%20Build-Passing%20(588ms)-00f0ff.svg?style=for-the-badge)](https://terra-waltz-l4uy22z2p-vzebee.vercel.app/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blueviolet.svg?style=for-the-badge)](LICENSE)
 
 **Multi-Scale Dynamic Synthetic Aperture Radar (SAR) Fusion & Telemetry Engine for the NASA-ISRO NISAR Spacecraft**
 
-[🚀 Live Demo](http://localhost:3001) • [📽️ Interactive Slide Deck](http://localhost:3001/presentation.html) • [📄 Executive Master Dossier (PDF)](./TERRAWALTZ_MASTER_DOSSIER.pdf) • [📘 Architecture Guide](./DANCE_TUTORIAL.pdf)
+[🚀 Live Demo](https://terra-waltz-l4uy22z2p-vzebee.vercel.app/) • [📽️ Interactive Slide Deck](https://terra-waltz-l4uy22z2p-vzebee.vercel.app/presentation.html) • [📄 Executive Master Dossier (PDF)](./TERRAWALTZ_MASTER_DOSSIER.pdf) • [📘 Architecture Guide](./DANCE_TUTORIAL.pdf)
 
 </div>
 
@@ -167,8 +167,8 @@ Addressing operational continuity prior to full public commissioning:
 ### Installation & Execution (Under 60 Seconds)
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/terrawaltz-nisar-engine.git
-cd terrawaltz-nisar-engine
+git clone https://github.com/zamaan-ai/TerraWaltz.git
+cd TerraWaltz
 
 # 2. Install dependencies
 bun install   # or: npm install
@@ -209,7 +209,7 @@ curl -s http://localhost:3001/api/v1/math/verify
 
 ## 📄 Key Project Deliverables
 * **Executive Master Dossier (4 Pages)**: [`TERRAWALTZ_MASTER_DOSSIER.pdf`](./TERRAWALTZ_MASTER_DOSSIER.pdf)
-* **Interactive Presentation Slide Deck**: [`public/presentation.html`](http://localhost:3001/presentation.html)
+* **Interactive Presentation Slide Deck**: [Launch Live Deck](https://terra-waltz-l4uy22z2p-vzebee.vercel.app/presentation.html) • [View Source (`public/presentation.html`)](./public/presentation.html)
 * **Architecture & Tutorial Guide**: [`DANCE_TUTORIAL.pdf`](./DANCE_TUTORIAL.pdf)
 
 ---
