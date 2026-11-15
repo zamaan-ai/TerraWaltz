@@ -10,7 +10,7 @@
 
 **Multi-Scale Dynamic Synthetic Aperture Radar (SAR) Fusion & Telemetry Engine for the NASA-ISRO NISAR Spacecraft**
 
-[🚀 Live Demo](http://localhost:3001) • [📽️ Interactive Slide Deck](http://localhost:3001/presentation.html) • [📄 Executive Master Dossier (PDF)](./TERRAWALTZ_MASTER_DOSSIER.pdf) • [📘 Architecture Guide](./DANCE_TUTORIAL.pdf)
+[🚀 Live Demo](https://terra-waltz-l4uy22z2p-vzebee.vercel.app/) • [📽️ Interactive Slide Deck](http://localhost:3001/presentation.html) • [📄 Executive Master Dossier (PDF)](./TERRAWALTZ_MASTER_DOSSIER.pdf) • [📘 Architecture Guide](./DANCE_TUTORIAL.pdf)
 
 </div>
 
