@@ -1,0 +1,6 @@
+{
+  "name": "TerraWaltz — NISAR SAR Engine",
+  "description": "Multi-Scale Dynamic SAR Fusion Engine for NASA-ISRO NISAR radar observations. Tracks wetlands, mangrove degradation, flood inundation, and surface deformation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
