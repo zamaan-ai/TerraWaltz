@@ -7,6 +7,7 @@
 [![Test Vectors](https://img.shields.io/badge/Numerical%20Tests-14%2F14%20Passing-10b981.svg?style=for-the-badge)](./src/science/radarMath.ts)
 [![Build](https://img.shields.io/badge/Vite%20Build-Passing%20(588ms)-00f0ff.svg?style=for-the-badge)](https://terra-waltz-l4uy22z2p-vzebee.vercel.app/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blueviolet.svg?style=for-the-badge)](LICENSE)
+[![CI](https://github.com/zamaan-ai/TerraWaltz/actions/workflows/ci.yml/badge.svg)](https://github.com/zamaan-ai/TerraWaltz/actions)
 
 **Multi-Scale Dynamic Synthetic Aperture Radar (SAR) Fusion & Telemetry Engine for the NASA-ISRO NISAR Spacecraft**
 
@@ -133,6 +134,38 @@ $$\text{ZPD} = 0.0022768 \cdot \left[ \frac{P + \left(\frac{1255}{T} + 0.05\righ
 ---
 
 ## 7. Zero-Egress Cloud Architecture
+
+```mermaid
+flowchart TD
+    subgraph DataIngestion["Radar Satellites & Space Agency Archives"]
+        NISAR["NASA-ISRO NISAR Spacecraft (L & S-Band)"]
+        ASF["Alaska Satellite Facility (ASF DAAC)"]
+        MPC["Microsoft Planetary Computer (STAC API)"]
+        NISAR --> ASF
+        NISAR --> MPC
+    end
+
+    subgraph StreamingEngine["TerraWaltz Zero-Egress Cloud Pipeline"]
+        COGs["Cloud-Optimized GeoTIFFs (COGs) & Spatial Pyramids"]
+        ASF --> COGs
+        MPC --> COGs
+        RangeReq["HTTP Byte-Range Query Engine (Windowed Ingestion)"]
+        COGs --> RangeReq
+    end
+
+    subgraph TelemetryScience["Radar Astrophysics & InSAR Core (radarMath.ts)"]
+        RangeReq --> MathLab["Radiometric Normalization (β⁰ → σ⁰ / γ⁰)"]
+        MathLab --> Fusion["Dual-Frequency L/S-Band Fusion"]
+        MathLab --> InSAR["Differential InSAR Phase Unwrapping & Coherence (γ)"]
+        MathLab --> Tropo["ERA5 Tropospheric Slant Delay Calibration"]
+    end
+
+    subgraph VisualDelivery["Interactive Spatial Client (Three.js & WebGL)"]
+        Fusion --> Globe["3D Spatial Globe & Ground Orbit Tracks"]
+        InSAR --> Heatmap["Surface Deformation Heatmaps (mm/yr)"]
+        Tropo --> Alerts["Automated Dykes & Hydrological Hazard Alerts"]
+    end
+```
 
 A single uncompressed NISAR Level-1 Single Look Complex (SLC) granule exceeds **$1.8\text{ GB}$**. Downloading raw archives would cost thousands in cloud egress and choke client bandwidth.
 
